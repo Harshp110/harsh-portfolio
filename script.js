@@ -1,39 +1,32 @@
-// Section reveal
-const reveals = document.querySelectorAll(".reveal");
-
-function revealOnScroll() {
-  reveals.forEach(el => {
-    const top = el.getBoundingClientRect().top;
-    if (top < window.innerHeight * 0.8) {
-      el.classList.add("active");
-    }
+// reveal animation
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) e.target.classList.add("active");
   });
-}
-
-window.addEventListener("scroll", revealOnScroll);
-window.addEventListener("load", revealOnScroll);
-
-// Terminal entrance
-const terminal = document.querySelector(".terminal");
-window.addEventListener("load", () => {
-  setTimeout(() => terminal.classList.add("active"), 300);
 });
 
-// Nav highlight
-const navLinks = document.querySelectorAll(".nav-links a");
+document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
 
-window.addEventListener("scroll", () => {
-  let fromTop = window.scrollY + 150;
-  navLinks.forEach(link => {
-    const section = document.querySelector(link.getAttribute("href"));
-    if (!section) return;
-    if (
-      section.offsetTop <= fromTop &&
-      section.offsetTop + section.offsetHeight > fromTop
-    ) {
-      link.classList.add("active");
-    } else {
-      link.classList.remove("active");
-    }
+// AI call
+async function askAI() {
+  const q = document.getElementById("query").value;
+
+  const res = await fetch("http://localhost:8000/ask", {
+    method: "POST",
+    headers: {"Content-Type": "application/json"},
+    body: JSON.stringify({query: q})
+  });
+
+  const data = await res.json();
+  document.getElementById("response").innerText = data.answer;
+}
+
+// 3D tilt
+document.querySelectorAll(".card").forEach(card => {
+  card.addEventListener("mousemove", e => {
+    card.style.transform = `rotateX(${e.offsetY/10}deg) rotateY(${e.offsetX/10}deg)`;
+  });
+  card.addEventListener("mouseleave", () => {
+    card.style.transform = "none";
   });
 });
