@@ -5,25 +5,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Harsh S. Pandav | Software Engineer</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
 
+<!-- NAV -->
 <nav class="nav">
   <span class="logo">harsh@engineer:~$</span>
   <div class="nav-links">
     <a href="#hero">home</a>
-    <a href="#experience">experience</a>
+    <a href="#about">about</a>
     <a href="#skills">skills</a>
+    <a href="#experience">experience</a>
     <a href="#projects">projects</a>
-    <a href="#ai">AI</a>
-    <a href="#contact">contact</a>
+    <a href="https://github.com/Harshp110" target="_blank">github</a>
   </div>
 </nav>
 
-<section id="hero" class="page hero">
-  <h1 class="name">HARSH S.<span>PANDAV</span></h1>
+<!-- HERO -->
+<section id="hero" class="hero page">
+  <h1 class="name">
+    HARSH S.<span>PANDAV</span><span class="cursor">█</span>
+  </h1>
 
   <pre class="terminal">
 <span class="green">harsh@engineer</span>:<span class="blue">~</span>$ whoami
@@ -34,59 +38,135 @@ Python Developer Intern @ LogicLoom IT Solutions
 
 <span class="green">harsh@engineer</span>:<span class="blue">~</span>$ focus
 Backend • APIs • ML pipelines • scalable systems
+
+<span class="green">harsh@engineer</span>:<span class="blue">~</span>$ contact
+📧 harshpandav110@gmail.com
+📞 +91 8329943751
   </pre>
 </section>
 
-<section id="experience" class="section reveal">
-  <h2>$ experience</h2>
-  <div class="card">
-    <h3>Python Developer Intern — LogicLoom</h3>
-    <p class="meta">2026 — Present</p>
-    <ul>
-      <li>Built REST APIs using FastAPI/Flask</li>
-      <li>Improved backend performance by ~20%</li>
-      <li>Worked with MongoDB/MySQL</li>
-      <li>Handled debugging in real systems</li>
-    </ul>
-  </div>
+<!-- ABOUT -->
+<section id="about" class="section page reveal">
+  <h2>$ about</h2>
+
+  <p>
+    I am a 3rd year Computer Engineering student at SPPU with strong interest
+    in backend systems and system-level development.
+  </p>
+
+  <p>
+    I build real-world applications involving REST APIs, backend services,
+    and data-driven systems with focus on scalability and performance.
+  </p>
+
+  <p>
+    My approach: build → deploy → break → optimize.
+  </p>
 </section>
 
-<section id="skills" class="section reveal">
+<!-- SKILLS -->
+<section id="skills" class="section page reveal">
   <h2>$ skills</h2>
-  <div class="card">
-    <p><b>Languages:</b> Python, C++, Java, SQL</p>
-    <p><b>Backend:</b> FastAPI, Flask, APIs</p>
-    <p><b>Frontend:</b> React, HTML, CSS</p>
-    <p><b>ML:</b> Pandas, NumPy</p>
+
+  <p><b>Programming Languages:</b><br>
+    Python, C, C++, Java, SQL
+  </p>
+
+  <p><b>Backend Development:</b><br>
+    FastAPI, Flask, REST API design, authentication basics,
+    validation, API testing
+  </p>
+
+  <p><b>Frontend Development:</b><br>
+    React, HTML5, CSS3, API integration
+  </p>
+
+  <p><b>Databases & Storage:</b><br>
+    MongoDB, MySQL, PostgreSQL, schema design,
+    indexing, CRUD operations
+  </p>
+
+  <p><b>Machine Learning & Data:</b><br>
+    Data preprocessing, feature engineering,
+    ML pipelines, analytics
+  </p>
+
+  <p><b>Core Computer Science:</b><br>
+    Data Structures, Algorithms, OOP,
+    DBMS, Operating Systems
+  </p>
+
+  <p><b>Tools & Workflow:</b><br>
+    Git, GitHub, Linux, VS Code,
+    deployment workflows
+  </p>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience" class="section page reveal">
+  <h2>$ experience</h2>
+
+  <div class="project">
+    <h3>Python Developer Intern — LogicLoom IT Solutions</h3>
+    <p>
+      Developed backend APIs using FastAPI and Flask, worked with real-world
+      datasets, debugged production-level issues, and improved system performance.
+    </p>
   </div>
 </section>
 
-<section id="projects" class="section reveal">
+<!-- PROJECTS -->
+<section id="projects" class="section page reveal">
   <h2>$ projects</h2>
 
-  <div class="card">KreedAI — ML platform (5000+ records)</div>
-  <div class="card">Policy Dashboard — React + FastAPI</div>
-  <div class="card">ResumeIQ — NLP ATS analyzer</div>
-</section>
+  <div class="project">
+    <h3>KreedAI</h3>
+    <p>
+      AI sports analytics platform processing 5,000+ records using machine learning
+      pipelines and interactive dashboards.
+    </p>
+    <p>
+      <a href="https://kreedai-vbaggixxhxgkgtcrer5kam.streamlit.app/" target="_blank">[live]</a>
+      <a href="https://github.com/Harshp110/kreedai" target="_blank">[code]</a>
+    </p>
+  </div>
 
-<section id="ai" class="section reveal">
-  <h2>$ ask_harsh_ai</h2>
+  <div class="project">
+    <h3>Policy Impact Dashboard</h3>
+    <p>
+      Full-stack analytics dashboard built using React and FastAPI,
+      exposing structured data through REST APIs.
+    </p>
+    <p>
+      <a href="https://policy-impact-dashboardd-g0yds2jja.vercel.app/" target="_blank">[frontend]</a>
+      <a href="https://policy-impact-dashboard-by-harsh-pandav.onrender.com/" target="_blank">[api]</a>
+    </p>
+  </div>
 
-  <div class="card ai-box">
-    <input type="text" id="query" placeholder="Ask anything about Harsh..." />
-    <button onclick="askAI()">Ask</button>
-    <div id="response"></div>
+  <div class="project">
+    <h3>India Crime Risk Intelligence</h3>
+    <p>
+      Machine learning dashboard analyzing crime trends and regional risk patterns.
+    </p>
+    <p>
+      <a href="https://india-crime-risk-intelligence-by-harsh.streamlit.app/" target="_blank">[live]</a>
+    </p>
+  </div>
+
+  <div class="project">
+    <h3>ResumeIQ</h3>
+    <p>
+      NLP-based ATS resume analyzer comparing resumes with job descriptions.
+    </p>
+    <p>
+      <a href="https://github.com/Harshp110/ResumeIQ" target="_blank">[code]</a>
+    </p>
   </div>
 </section>
 
-<section id="contact" class="section reveal">
-  <h2>$ contact</h2>
-  <div class="card">
-    <p>Email: <a href="mailto:harshpandav110@gmail.com">harshpandav110@gmail.com</a></p>
-    <p>Phone: <a href="tel:+918329943751">+91 8329943751</a></p>
-    <p><a href="https://github.com/Harshp110">GitHub</a></p>
-  </div>
-</section>
+<footer class="page">
+  <p>© 2026 Harsh S. Pandav</p>
+</footer>
 
 <script src="script.js"></script>
 </body>
