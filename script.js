@@ -1,8 +1,10 @@
+// Section reveal
 const reveals = document.querySelectorAll(".reveal");
 
 function revealOnScroll() {
   reveals.forEach(el => {
     const top = el.getBoundingClientRect().top;
+
     if (top < window.innerHeight * 0.8) {
       el.classList.add("active");
     }
@@ -12,13 +14,16 @@ function revealOnScroll() {
 window.addEventListener("scroll", revealOnScroll);
 window.addEventListener("load", revealOnScroll);
 
+
 // Terminal entrance
 const terminal = document.querySelector(".terminal");
+
 window.addEventListener("load", () => {
   setTimeout(() => {
     if (terminal) terminal.classList.add("active");
   }, 300);
 });
+
 
 // Nav highlight
 const navLinks = document.querySelectorAll(".nav-links a");
